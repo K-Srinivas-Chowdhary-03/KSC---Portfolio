@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -81,32 +81,34 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-      {isMobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 py-4 px-6 flex flex-col gap-4 shadow-2xl"
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-muted hover:text-foreground transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link
-            href="#contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-2 w-full text-center px-5 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-md transition-all shadow-[0_0_15px_rgba(229,9,20,0.3)]"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 py-4 px-6 flex flex-col gap-4 shadow-2xl"
           >
-            Let&apos;s Talk
-          </Link>
-        </motion.div>
-      )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-lg font-medium text-muted hover:text-foreground transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-2 w-full text-center px-5 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-md transition-all shadow-[0_0_15px_rgba(229,9,20,0.3)]"
+            >
+              Let&apos;s Talk
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

@@ -50,7 +50,7 @@ export default function Contact() {
               </div>
               <div className="text-center">
                 <div className="text-sm text-muted mb-1">Email</div>
-                <div className="font-medium text-foreground group-hover:text-accent transition-colors">{portfolioData.personalInfo.email}</div>
+                <div className="font-medium text-foreground group-hover:text-accent transition-colors break-all text-sm sm:text-base px-2">{portfolioData.personalInfo.email}</div>
               </div>
             </a>
 

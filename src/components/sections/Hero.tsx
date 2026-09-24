@@ -70,7 +70,7 @@ export default function Hero() {
             <span className="text-xs font-mono text-muted">Available for work</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground flex flex-col items-start min-h-[140px] md:min-h-[160px] justify-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground flex flex-col items-start min-h-[120px] md:min-h-[160px] justify-center">
             <span className="mb-2">Hi, I&apos;m</span>
             <div className="relative w-full h-[1.2em]">
               <AnimatePresence mode="wait">

@@ -24,7 +24,7 @@ export default function Footer() {
             />
             <span className="text-accent text-2xl font-black ml-1 relative z-10 font-mono tracking-tighter">/&gt;</span>
           </div>
-          <p className="text-sm text-muted mt-2">
+          <p className="text-sm text-muted mt-2 text-center md:text-left">
             Java Full-Stack Developer • React.js Developer
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-sm text-muted">
+        <div className="text-sm text-muted text-center md:text-right">
           &copy; {currentYear} {portfolioData.personalInfo.name}. All rights reserved.
         </div>
         

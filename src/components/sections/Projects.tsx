@@ -7,7 +7,7 @@ import { portfolioData } from "@/data/portfolio";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-transparent relative">
+    <section id="projects" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
 

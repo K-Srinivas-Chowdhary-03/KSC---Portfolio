@@ -23,7 +23,7 @@ export default function Achievements() {
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-foreground via-muted to-foreground mb-4">
             CODE. SOLVE. BUILD.
           </h2>
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
             <a href={portfolioData.personalInfo.github} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-border hover:border-accent text-foreground hover:text-accent font-medium rounded-md transition-colors flex items-center gap-2">
               <Code2 size={18} /> GitHub Profile
             </a>
